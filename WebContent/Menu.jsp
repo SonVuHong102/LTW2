@@ -3,7 +3,7 @@
 <!--begin of menu-->
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
 	<div class="container">
-		<a class="navbar-brand" href="SvlHomePage">Shoes</a>
+		<a class="navbar-brand" href="SvlHomePage">Sneaker Shop</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarsExampleDefault"
 			aria-controls="navbarsExampleDefault" aria-expanded="false"
@@ -18,12 +18,12 @@
 					<li class="nav-item"><a class="nav-link" href="SvlDangXuat">Logout</a></li>
 				</c:if>
 				<c:if test="${sessionScope.nguoidung == null}">
-					<li class="nav-item"><a class="nav-link" href="Login.jsp">Login</a>
+					<li class="nav-item"><a class="nav-link" href="Login.jsp">Login</a></li>
 				</c:if>
-				</li>
 			</ul>
 
 		</div>
+                <a class="btn btn-success btn-sm ml-3" href="SvlGioHang"> <i class="fa fa-shopping-cart"></i> Cart </a>
 	</div>
 </nav>
 <section class="jumbotron text-center">

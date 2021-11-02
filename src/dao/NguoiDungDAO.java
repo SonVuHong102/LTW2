@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import model.NguoiDung;
-import model.SanPham;
 
 public class NguoiDungDAO extends DAO {
 	public NguoiDungDAO() {
@@ -26,7 +25,7 @@ public class NguoiDungDAO extends DAO {
 			ps.setString(2, pass);
 			rs = ps.executeQuery();
 			if (rs.next()) {
-				nd = new NguoiDung(user, pass, rs.getString("name"), rs.getString("email"), rs.getString("sdt"));
+				nd = new NguoiDung(rs.getInt("id"),user, pass, rs.getString("name"), rs.getString("email"), rs.getString("sdt"));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

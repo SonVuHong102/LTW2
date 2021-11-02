@@ -5,7 +5,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Random;
 
 import model.SanPham;
 
@@ -66,5 +65,21 @@ public class SanPhamDAO extends DAO {
 			e.printStackTrace();
 		}
 		return list;
+	}
+	
+	public int getGia(int id) {
+		int gia = 0;
+		try {
+			String query = "SELECT gia FROM sanpham WHERE id = ?";
+			ps = con.prepareStatement(query);
+			ps.setInt(1, id);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				gia = rs.getInt("gia");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return gia;
 	}
 }

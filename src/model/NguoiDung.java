@@ -7,13 +7,24 @@ public class NguoiDung {
 	private String name;
 	private String email;
 	private String sdt;
-	public NguoiDung(String username, String password, String name, String email, String sdt) {
+	public NguoiDung(int id,String username, String password, String name, String email, String sdt) {
+		this.id = id;
 		this.username = username;
 		this.password = password;
 		this.name = name;
 		this.email = email;
 		this.sdt = sdt;
 	}
+	
+	public NguoiDung(String username, String password, String name, String email, String sdt) {
+		super();
+		this.username = username;
+		this.password = password;
+		this.name = name;
+		this.email = email;
+		this.sdt = sdt;
+	}
+
 	public int getId() {
 		return id;
 	}

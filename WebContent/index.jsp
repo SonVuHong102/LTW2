@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -40,10 +41,10 @@
 									<p class="card-text show_txt">${o.tieude}</p>
 									<div class="row">
 										<div class="col">
-											<p class="btn btn-danger btn-block">${o.gia}</p>
+											<p class="btn btn-danger btn-block"> <fmt:formatNumber type = "number" maxFractionDigits = "3" value = "${o.gia}" /> VND</p>
 										</div>
 										<div class="col">
-											<a href="#" class="btn btn-success btn-block">Add to cart</a>
+											<a href="SvlThemSP?id=${o.id}" class="btn btn-success btn-block">Thêm vào giỏ hàng</a>
 										</div>
 									</div>
 								</div>
