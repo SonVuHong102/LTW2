@@ -24,17 +24,6 @@
 	<jsp:include page="Menu.jsp"></jsp:include>
 	<div class="container">
 		<div class="row">
-			<div class="col">
-				<nav aria-label="breadcrumb">
-					<ol class="breadcrumb">
-						<li class="breadcrumb-item active" aria-current="#">${}</li>
-					</ol>
-				</nav>
-			</div>
-		</div>
-	</div>
-	<div class="container">
-		<div class="row">
 			<jsp:include page="Left.jsp"></jsp:include>
 			<div class="col-sm-9">
 				<div class="row">

@@ -17,7 +17,7 @@
     </head>
     <body>
         <div id="logreg-forms">
-            <form class="form-signin" action="login" method="post">
+            <form class="form-signin" action="SvlDangNhap" method="post">
                 <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign in</h1>
                 <p class="text-danger">${mess}</p>
                 <input name="user"  type="text" id="inputEmail" class="form-control" placeholder="Username" required="" autofocus="">
@@ -33,11 +33,15 @@
                 <button class="btn btn-primary btn-block" type="button" id="btn-signup"><i class="fas fa-user-plus"></i> Sign up New Account</button>
             </form>
 
-            <form action="signup" method="post" class="form-signup">
+            <form action="SvlDangKy" method="post" class="form-signup">
                 <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign up</h1>
-                <input name="user" type="text" id="user-name" class="form-control" placeholder="User name" required="" autofocus="">
+                
+                <input name="user" type="text" id="user-username" class="form-control" placeholder="User name" required="" autofocus="">
                 <input name="pass" type="password" id="user-pass" class="form-control" placeholder="Password" required autofocus="">
                 <input name="repass" type="password" id="user-repeatpass" class="form-control" placeholder="Repeat Password" required autofocus="">
+                <input name="name" type="text" id="user-name" class="form-control" placeholder="Name" required autofocus="">
+                <input name="email" type="text" id="user-email" class="form-control" placeholder="Email" required autofocus="">
+                <input name="sdt" type="text" id="user-sdt" class="form-control" placeholder="0123456789" required autofocus="">
 
                 <button class="btn btn-primary btn-block" type="submit"><i class="fas fa-user-plus"></i> Sign Up</button>
                 <a href="#" id="cancel_signup"><i class="fas fa-angle-left"></i> Back</a>
