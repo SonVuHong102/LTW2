@@ -10,7 +10,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Sneaker Shop</title>
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -61,7 +61,7 @@
                                     <aside class="col-sm-5 border-right">
                                         <article class="gallery-wrap"> 
                                             <div class="img-big-wrap">
-                                                <div> <a href="#"><img src="${sp.hinhanh}"></a></div>
+                                                <div><img src="${sp.hinhanh}"></div>
                                             </div> <!-- slider-product.// -->
                                             <div class="img-small-wrap">
                                             </div> <!-- slider-nav.// -->
@@ -80,26 +80,7 @@
                                                 <dt>Mô tả</dt>
                                                 <dd><p>${sp.mota}</p></dd>
                                             </dl>
-
-                                            <hr>
-                                            <div class="row">
-                                                <div class="col-sm-5">
-                                                    <dl class="param param-inline">
-                                                        <dt>Số lượng: </dt>
-                                                        <dd>
-                                                            <select class="form-control form-control-sm" style="width:70px;">
-                                                                <option> 1 </option>
-                                                                <option> 2 </option>
-                                                                <option> 3 </option>
-                                                            </select>
-                                                        </dd>
-                                                    </dl>  <!-- item-property .// -->
-                                                </div> <!-- col.// -->
-
-                                            </div> <!-- row.// -->
-                                            <hr>
-                                            <a href="#" class="btn btn-lg btn-primary text-uppercase"> Buy now </a>
-                                            <a href="#" class="btn btn-lg btn-outline-primary text-uppercase"> <i class="fas fa-shopping-cart"></i> Add to cart </a>
+                                            <a href="SvlThemSP?id=${sp.id}" class="btn btn-lg btn-outline-primary text-uppercase"> <i class="fas fa-shopping-cart"></i> Thêm vào giỏ</a>
                                         </article> <!-- card-body.// -->
                                     </aside> <!-- col.// -->
                                 </div> <!-- row.// -->

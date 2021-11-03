@@ -4,12 +4,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>JSP Page</title>
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+<script
+	src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script
+	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<link
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+	rel="stylesheet"
+	integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
 	crossorigin="anonymous">
+<link href="css/style.css" rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -74,8 +82,22 @@
 							<!-- End -->
 						</div>
 					</div>
+					
 
 					<div class="row py-5 p-4 bg-white rounded shadow-sm">
+						<div class="col-lg-6">
+							<div
+								class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Phương thức thanh toán</div>
+							<div class="p-4">
+								<ul class="list-unstyled mb-4">
+									<li class="d-flex justify-content-between py-3 border-bottom">
+										<strong class="text-muted">Phương thức thanh toán</strong><strong>Thanh toán khi nhận hàng</strong></li>
+									<li class="d-flex justify-content-between py-3 border-bottom">
+										<strong class="text-muted">Đơn vị giao hàng</strong><strong>Viettel Post</strong>
+									</li>
+								</ul>
+							</div>
+						</div>
 						<div class="col-lg-6">
 							<div
 								class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Thành tiền</div>
@@ -97,14 +119,17 @@
 									</li>
 								</ul>
 								<a href="SvlMuaHang" class="btn btn-dark rounded-pill py-2 btn-block">Mua hàng</a>
+								
 							</div>
 						</div>
 					</div>
+					
 
 				</div>
 			</div>
 		</div>
 	</div>
+	<jsp:include page="Footer.jsp"></jsp:include>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
 		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
 		crossorigin="anonymous"></script>

@@ -27,7 +27,7 @@ public class GioHangController {
 	public int tongtien(ArrayList<SanPhamDaChon> list) {
 		int s = 0;
 		for (SanPhamDaChon i : list) {
-			s += i.getGia();
+			s += i.getGia()*i.getSoluong();
 		}
 		return s;
 	}

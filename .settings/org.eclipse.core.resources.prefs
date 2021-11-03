@@ -1,3 +1,5 @@
 eclipse.preferences.version=1
+encoding//WebContent/Login.jsp=UTF-8
+encoding//WebContent/TuyenDung.jsp=UTF-8
 encoding//src/servlet/SvlDangKy.java=UTF-8
 encoding//src/servlet/SvlDangNhap.java=UTF-8

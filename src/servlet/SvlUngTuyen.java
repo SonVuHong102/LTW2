@@ -1,30 +1,27 @@
 package servlet;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import controller.HomePageController;
-import model.DanhMuc;
-import model.SanPham;
+import dao.UngTuyenDAO;
+import model.UngTuyen;
 
 /**
- * Servlet implementation class SvlChiTiet
+ * Servlet implementation class SvlUngTuyen
  */
-@WebServlet("/SvlChiTiet")
-public class SvlChiTiet extends HttpServlet {
+@WebServlet("/SvlUngTuyen")
+public class SvlUngTuyen extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public SvlChiTiet() {
+    public SvlUngTuyen() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -33,17 +30,7 @@ public class SvlChiTiet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int id = Integer.parseInt(request.getParameter("id"));
-		HomePageController hc = new HomePageController();
-		SanPham sp = hc.getSanPham(id);	
-		request.setAttribute("sp", sp);
-		ArrayList<DanhMuc> listDM = hc.getAllDanhMuc();
-		request.setAttribute("listDanhMuc", listDM);
-		ArrayList<SanPham> listSP = hc.getDeNghi();
-		request.setAttribute("listDeNghi", listSP);
-		ServletContext sc = request.getSession().getServletContext();
-		String url = "/Detail.jsp";
-		sc.getRequestDispatcher(url).forward(request, response);
+		
 	}
 
 	/**
@@ -51,7 +38,13 @@ public class SvlChiTiet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		String name = (String) request.getParameter("name");
+		String email = (String) request.getParameter("email");
+		String sdt = (String) request.getParameter("sdt");
+		UngTuyen ut = new UngTuyen(name,email,sdt);
+		UngTuyenDAO utd = new UngTuyenDAO();
+		utd.them(ut);
+		response.sendRedirect("SvlHomePage");
 	}
 
 }

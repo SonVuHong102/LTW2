@@ -40,7 +40,7 @@ public class SvlMuaHang extends HttpServlet {
 			GioHangController ghc = new GioHangController();
 			ghc.xoaAllDonHang(nd.getId());
 			ServletContext sc = session.getServletContext();
-			String url = "/SvlGioHang";
+			String url = "/SvlHomePage";
 			sc.getRequestDispatcher(url).forward(request, response);
 		}
 	}
